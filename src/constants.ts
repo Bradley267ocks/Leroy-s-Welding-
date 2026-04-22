@@ -12,6 +12,7 @@ export interface Service {
   description: string;
   icon: any;
   details: string[];
+  image: string;
 }
 
 export const SERVICES: Service[] = [
@@ -20,42 +21,48 @@ export const SERVICES: Service[] = [
     title: 'Welding',
     description: 'Expert structural welding, meticulous repairs, and bespoke custom metalwork tailored to your exact industrial specifications.',
     icon: Zap,
-    details: ['Structural welding', 'Repairs', 'Custom work']
+    details: ['Structural welding', 'Repairs', 'Custom work'],
+    image: 'https://i.ibb.co/KpRHPZJ0/pipe-welding.jpg'
   },
   {
     id: 'pipework',
     title: 'Pipework',
     description: 'Precision industrial pipe installation and comprehensive maintenance solutions for high-performance fluid systems.',
     icon: Wrench,
-    details: ['Industrial pipe installation', 'Repairs & maintenance']
+    details: ['Industrial pipe installation', 'Repairs & maintenance'],
+    image: 'https://i.ibb.co/7NYZrSSZ/pipe-work.jpg'
   },
   {
     id: 'fabrication',
     title: 'Fabrication',
     description: 'Custom metal fabrication including heavy-duty frames, complex structures, and specialized industrial supports.',
     icon: Hammer,
-    details: ['Custom metal fabrication', 'Frames', 'Structures', 'Supports']
+    details: ['Custom metal fabrication', 'Frames', 'Structures', 'Supports'],
+    image: 'https://i.ibb.co/4wccfVRw/fabrication-welding.jpg'
   },
   {
     id: 'cut-supply',
     title: 'Cut, Supply & Rolling',
     description: 'Professional steel cutting, reliable material supply, and high-precision plate rolling services.',
-    icon: ScissorsIcon, // Realized I need to import Scissors or use a custom one, I'll use Lucide's Scissors
-    details: ['Steel cutting', 'Material supply', 'Plate rolling']
+    icon: ScissorsIcon,
+    details: ['Steel cutting', 'Material supply', 'Plate rolling'],
+    image: 'https://i.ibb.co/60P51Fq2/Whats-App-Image-2026-04-22-at-09-41-34.jpg'
   },
   {
     id: 'hdpe',
     title: 'HDPE Piping',
     description: 'Specialized HDPE piping installation and repairs for demanding industrial and commercial applications.',
     icon: Shield,
-    details: ['Installation', 'Repairs', 'Industrial applications']
+    details: ['Installation', 'Repairs', 'Industrial applications'],
+    image: 'https://i.ibb.co/prdhvKJf/hdpe-pipe-welding.webp'
   },
   {
     id: 'labour_hire',
     title: 'Labour Hire',
     description: 'Access to highly skilled welding teams and reliable site support workers for your specialized project needs.',
     icon: Users,
-    details: ['Skilled welding teams', 'Site support workers']
+    details: ['Skilled welding teams', 'Site support workers'],
+    image: 'https://i.ibb.co/W4xmdh7v/labour-hire-welding.jpg'
   }
 ];
 
@@ -65,16 +72,16 @@ export const PROJECTS = [
     title: "Industrial Pipe Installation",
     client: "Local Manufacturing Plant",
     service: "Pipework",
-    before: "https://images.unsplash.com/photo-1558444479-c8a51e97cf20?auto=format&fit=crop&q=80&w=1000",
-    after: "https://images.unsplash.com/photo-1542337318-724806a5b282?auto=format&fit=crop&q=80&w=1000"
+    before: "https://images.unsplash.com/photo-1542337318-724806a5b282?auto=format&fit=crop&q=80&w=1000",
+    after: "https://images.unsplash.com/photo-1558444479-c8a51e97cf20?auto=format&fit=crop&q=80&w=1000"
   },
   {
     id: 2,
     title: "Custom Steel Frame Fabrication",
     client: "Construction Project PMB",
     service: "Fabrication",
-    before: "https://images.unsplash.com/photo-1504917595217-d4dc5f665c59?auto=format&fit=crop&q=80&w=1000",
-    after: "https://images.unsplash.com/photo-1534398079543-7ae6d016b167?auto=format&fit=crop&q=80&w=1000"
+    before: "https://images.unsplash.com/photo-1507537509458-b8312d35a233?auto=format&fit=crop&q=80&w=1000",
+    after: "https://images.unsplash.com/photo-1504917595217-d4dc5f665c59?auto=format&fit=crop&q=80&w=1000"
   },
   {
     id: 3,
@@ -82,6 +89,6 @@ export const PROJECTS = [
     client: "Municipal Water Works",
     service: "HDPE Piping",
     before: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=1000",
-    after: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80&w=1000"
+    after: "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&q=80&w=1000"
   }
 ];

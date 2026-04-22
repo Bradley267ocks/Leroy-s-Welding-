@@ -35,21 +35,22 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`py-16 md:py-24 relative overflow-hidden ${index % 2 === 0 ? 'bg-white' : 'bg-industrial-grey border-y border-zinc-200'}`}
+            className={`py-16 md:py-24 relative overflow-hidden ${index % 2 === 0 ? 'bg-white' : 'bg-zinc-50/50 border-y border-zinc-200'}`}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
               <div className={`flex flex-col lg:flex-row gap-10 md:gap-16 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className="flex-1 w-full relative">
-                  <div className="relative aspect-[4/3] rounded-sm overflow-hidden border border-zinc-200 group">
+                  <div className="relative aspect-video rounded-sm overflow-hidden border border-zinc-200 group bg-industrial-black shadow-xl">
                     <img 
-                      src={`https://picsum.photos/seed/${service.id}/1200/900`} 
+                      src={service.image} 
                       alt={service.title} 
-                      className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
+                      className="w-full h-full object-cover transition-all duration-700 hover:scale-110 brightness-90 group-hover:brightness-100"
                       referrerPolicy="no-referrer"
                     />
+                    <div className="absolute inset-0 bg-brand-gold/5 group-hover:bg-transparent transition-colors" />
                   </div>
-                  <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-10 h-10 md:w-12 md:h-12 border-t-2 border-l-2 border-brand-gold" />
-                  <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-10 h-10 md:w-12 md:h-12 border-b-2 border-r-2 border-brand-gold" />
+                  <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-10 h-10 md:w-12 md:h-12 border-t-2 border-l-2 border-brand-gold z-10" />
+                  <div className="absolute -bottom-3 -right-3 md:-bottom-4 md:-right-4 w-10 h-10 md:w-12 md:h-12 border-b-2 border-r-2 border-brand-gold z-10" />
                 </div>
 
                 <div className="flex-1 space-y-6 md:space-y-8 text-center lg:text-left">

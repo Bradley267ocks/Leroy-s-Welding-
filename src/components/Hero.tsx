@@ -6,28 +6,28 @@ import { PHONE_NUMBER } from '../constants';
 
 export default function Hero() {
   return (
-    <section className="relative pt-24 md:pt-32 pb-12 overflow-hidden px-4 sm:px-6 lg:px-10 bg-white">
+    <section className="relative pt-24 md:pt-40 pb-12 overflow-hidden px-4 sm:px-6 lg:px-10 bg-white">
       <div className="max-w-7xl mx-auto container">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div className="flex flex-col gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="md:col-span-7 flex flex-col items-center md:items-start text-center md:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full flex flex-col items-center text-center z-10"
           >
             <div className="inline-flex items-center gap-2 bg-brand-gold/10 border border-brand-gold/20 text-brand-gold-dark px-3 py-1 rounded-full text-[8px] md:text-[10px] font-bold tracking-widest uppercase mb-6 whitespace-nowrap">
               Industrial & Commercial Solutions
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-6 text-industrial-black break-words">
-              PROFESSIONAL <span className="text-transparent text-stroke italic">WELDING</span><br />& FABRICATION.
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight mb-6 text-industrial-black break-words max-w-4xl">
+              PRECISION <span className="text-transparent text-stroke italic">FORGED</span><br />IN EVERY WELD.
             </h1>
-            <p className="text-zinc-500 text-base md:text-xl leading-snug max-w-lg mb-8 font-medium">
-              High-quality pipework, HDPE solutions, and industrial labour hire in Pietermaritzburg. Reliability forged in steel.
+            <p className="text-zinc-500 text-base md:text-xl leading-snug max-w-2xl mb-8 font-medium">
+              Professional welding, HDPE piping, and structural fabrication solutions for Pietermaritzburg. We bring your blueprints to life with heavy-duty reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <a 
                 href={`tel:${PHONE_NUMBER.replace(/\s/g, '')}`}
-                className="bg-brand-gold hover:bg-brand-gold-dark text-white font-black px-6 py-4 flex items-center justify-center gap-3 transition-all uppercase text-xs md:text-sm tracking-tight rounded-sm"
+                className="bg-brand-gold hover:bg-brand-gold-dark text-white font-black px-6 py-4 flex items-center justify-center gap-3 transition-all uppercase text-xs md:text-sm tracking-tight rounded-sm shadow-xl"
               >
                 <Phone size={18} fill="currentColor" />
                 CALL NOW {PHONE_NUMBER}
@@ -44,27 +44,19 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="md:col-span-5 w-full"
+            initial={{ opacity: 0, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="w-full flex justify-center px-4"
           >
-            <div className="relative bg-industrial-grey border border-zinc-200 p-6 md:p-8 rounded-sm overflow-hidden group">
-              <div className="absolute top-0 right-0 p-4 opacity-5 font-black text-6xl md:text-8xl transition-opacity group-hover:opacity-10 pointer-events-none">24/7</div>
-              <h3 className="text-brand-gold font-bold mb-3 uppercase tracking-wider text-xs md:text-sm">Emergency Services</h3>
-              <p className="text-zinc-500 text-xs md:text-sm mb-6 leading-relaxed">
-                Need urgent structural repairs or site support? Our mobile teams are ready for rapid dispatch across Pietermaritzburg.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 md:gap-6 text-[8px] md:text-[10px] font-mono text-zinc-400 font-bold uppercase tracking-widest">
-                <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                  Mkondeni Based
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-zinc-300"></div>
-                  Fast Turnaround
-                </span>
-              </div>
+            <div className="relative w-full max-w-5xl bg-industrial-black p-1 rounded-sm border border-zinc-200 shadow-2xl overflow-hidden">
+              <img 
+                src="https://i.ibb.co/4w6yCz93/Untitled-design-8.jpg"
+                alt="Professional Industrial Welding Action"
+                className="w-full h-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-industrial-black/20 to-transparent pointer-events-none" />
             </div>
           </motion.div>
         </div>

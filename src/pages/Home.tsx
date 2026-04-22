@@ -48,14 +48,14 @@ export default function Home() {
               viewport={{ once: true }}
               className="relative w-full"
             >
-              <div className="relative aspect-video rounded-sm overflow-hidden border border-zinc-200 group">
+              <div className="relative aspect-video rounded-sm overflow-hidden border border-zinc-200 group bg-industrial-black shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=2070" 
-                  alt="Precision Welding Action" 
+                  src="https://i.ibb.co/GvfCr5Qq/Whats-App-Image-team-on-project.jpg" 
+                  alt="Industrial Workshop Team" 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-brand-gold/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-industrial-black/20 to-transparent" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-24 h-24 md:w-32 md:h-32 bg-brand-gold/10 rounded-sm blur-2xl -z-10" />
               <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 text-[8px] md:text-[10px] font-black uppercase tracking-widest text-brand-gold-dark border border-zinc-200">
@@ -112,6 +112,44 @@ export default function Home() {
                 </div>
                 <h3 className="text-sm font-black mb-3 uppercase tracking-wider text-industrial-black">{point.title}</h3>
                 <p className="text-[11px] text-zinc-500 leading-relaxed font-bold uppercase tracking-tight">{point.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Project Gallery */}
+      <section className="py-16 md:py-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 text-center">
+          <div className="mb-16">
+            <span className="text-brand-gold font-bold uppercase tracking-widest text-[10px] mb-4 block">Our Portfolio</span>
+            <h2 className="text-3xl md:text-5xl font-black text-industrial-black uppercase tracking-tighter">Recent <span className="text-transparent text-stroke italic">Projects</span></h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              "https://i.ibb.co/xSq17MRw/pipe-welding-project.jpg",
+              "https://i.ibb.co/gpv9KXR/truck-project.jpg",
+              "https://i.ibb.co/G3BWNWFC/project-3.jpg",
+              "https://i.ibb.co/5WKH1YyH/project-4.jpg",
+              "https://i.ibb.co/PZDfjgx0/steal-structur-project.jpg",
+              "https://i.ibb.co/chJtJy4F/Whats-App-Image-2026-04-22-at-09-41-35.jpg"
+            ].map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="aspect-square rounded-sm overflow-hidden border border-zinc-200 bg-industrial-black group relative shadow-lg"
+              >
+                <img 
+                  src={img} 
+                  alt={`Project ${i + 1}`} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-brand-gold/0 group-hover:bg-brand-gold/10 transition-colors pointer-events-none" />
               </motion.div>
             ))}
           </div>

@@ -15,9 +15,9 @@ export default function Footer() {
         <div className="h-4 w-px bg-zinc-200 hidden sm:block"></div>
         <span className="text-[10px] font-black uppercase tracking-wider text-industrial-black">© {new Date().getFullYear()} LEROY'S WELDING WORKS</span>
         <img 
-          src="https://i.ibb.co/Zp8P3C7s/Gemini-Generated-Image-1.png" 
-          alt="Small Logo" 
-          className="w-6 h-6 grayscale opacity-50"
+          src="https://i.ibb.co/N2kznf4N/Gemini-Generated-Image-2-removebg-preview-1.png" 
+          alt="LEROY'S WELDING WORKS Logo" 
+          className="w-32 h-12 grayscale opacity-50 object-contain"
           referrerPolicy="no-referrer"
         />
       </div>

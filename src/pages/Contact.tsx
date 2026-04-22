@@ -30,62 +30,56 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="mb-24 w-full">
+      {/* Main Content: Form & Info */}
+      <section className="pb-24 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="bg-[#fdfdfd] border border-zinc-200 rounded-sm overflow-hidden shadow-2xl p-6 md:p-12 transition-all hover:border-brand-gold/30">
-            <ContactForm />
-          </div>
-        </div>
-      </section>
-
-      {/* Info Grid */}
-      <section className="py-16 bg-industrial-grey border-y border-zinc-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {infoCards.map((card, index) => (
-              <motion.div 
-                key={card.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center md:text-left space-y-4"
-              >
-                <div className="w-12 h-12 bg-brand-gold/10 text-brand-gold rounded-sm flex items-center justify-center mx-auto md:mx-0 border border-brand-gold/20">
-                  <card.icon size={24} />
-                </div>
-                <h3 className="text-sm font-black uppercase tracking-tight text-industrial-black">{card.title}</h3>
-                <p className="text-[11px] text-zinc-500 leading-relaxed font-bold uppercase tracking-tighter">{card.detail}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Google Map Placeholder */}
-      <section className="mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="relative w-full h-[450px] bg-industrial-grey rounded-sm overflow-hidden border border-zinc-200 group">
-            <div className="absolute inset-0 grayscale contrast-125 opacity-20 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-40">
-               <div className="w-full h-full bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=2074')] bg-cover bg-center" />
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <div className="absolute bottom-8 left-8 right-8 md:right-auto md:w-96 glass-panel p-8 rounded-sm shadow-2xl">
-              <h3 className="text-xl font-black mb-4 uppercase tracking-tighter text-industrial-black italic">Visit Our Workshop</h3>
-              <p className="text-zinc-500 text-[11px] font-bold uppercase tracking-widest mb-6 leading-relaxed">
-                Unit 15 Roycol Park, 70 Murray Road, Mkondeni, Pietermaritzburg, 3201
-              </p>
-              <a 
-                href="https://www.google.com/maps/search/?api=1&query=Roycol+Park+Mkondeni+Pietermaritzburg" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-industrial-black text-white font-black px-6 py-3 rounded-sm hover:scale-[1.02] transition-transform w-full uppercase text-xs tracking-widest"
-              >
-                <span>Navigate via GPS</span>
-                <ExternalLink size={16} />
-              </a>
+            {/* Contact Form */}
+            <div className="lg:col-span-7 bg-[#fdfdfd] border border-zinc-200 rounded-sm overflow-hidden shadow-xl p-6 md:p-10 transition-all hover:border-brand-gold/30">
+              <ContactForm />
             </div>
+
+            {/* Info and Map */}
+            <div className="lg:col-span-5 space-y-8">
+              {/* Info Cards Column */}
+              <div className="bg-industrial-grey border border-zinc-200 p-8 rounded-sm space-y-8 shadow-inner">
+                {infoCards.map((card, index) => (
+                  <motion.div 
+                    key={card.title}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-start gap-4"
+                  >
+                    <div className="shrink-0 w-10 h-10 bg-brand-gold/10 text-brand-gold rounded-sm flex items-center justify-center border border-brand-gold/20">
+                      <card.icon size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-[10px] font-black uppercase tracking-widest text-zinc-400 mb-1">{card.title}</h3>
+                      <p className="text-xs font-black uppercase tracking-tight text-industrial-black leading-tight">{card.detail}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Integrated Map */}
+              <div className="relative w-full h-[350px] bg-industrial-grey rounded-sm overflow-hidden border border-zinc-200 shadow-xl group">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.575344314457!2d30.413725576770535!3d-29.6450625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6bd94998797f1%3A0xc3f17f8a7e0a4f5!2s70%20Murray%20Rd%2C%20Mkondeni%2C%20Pietermaritzburg%2C%203201%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1713781200000!5m2!1sen!2sza" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale contrast-110 opacity-90 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100"
+                  title="Leroy's Welding Works Location"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

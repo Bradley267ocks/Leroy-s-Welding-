@@ -20,27 +20,23 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
-    { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' },
   ];
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-20 flex items-center ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-16 md:h-20 flex items-center ${
         scrolled ? 'bg-white/80 backdrop-blur-md border-b border-zinc-200 shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full flex justify-between items-center gap-4">
-        <Link to="/" className="flex items-center gap-2 md:gap-4 shrink-0 transition-transform active:scale-95">
+        <Link to="/" className="flex items-center shrink-0 transition-transform active:scale-95">
           <img 
-            src="https://i.ibb.co/Zp8P3C7s/Gemini-Generated-Image-1.png" 
-            alt="Leroy's Welding Works Logo" 
-            className="w-8 h-8 md:w-16 md:h-16 object-contain mix-blend-multiply"
+            src="https://i.ibb.co/N2kznf4N/Gemini-Generated-Image-2-removebg-preview-1.png" 
+            alt="LEROY'S WELDING WORKS" 
+            className="w-32 h-10 md:w-56 md:h-16 object-contain"
             referrerPolicy="no-referrer"
           />
-          <span className="text-lg md:text-2xl font-black tracking-tighter text-industrial-black flex flex-col leading-none">
-            LEROY'S <span className="text-brand-gold uppercase text-[8px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] font-bold">WELDING WORKS</span>
-          </span>
         </Link>
 
         {/* Desktop Nav */}
