@@ -9,6 +9,7 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row gap-8 text-[10px] font-black text-zinc-400 uppercase tracking-widest text-center md:text-left">
         <span className="flex items-center gap-2 text-zinc-500"><MapPin size={12} className="text-brand-gold" /> {ADDRESS}</span>
         <span className="text-zinc-500">Reg No: {REG_NO}</span>
+        <a href="https://www.leroysweldingworks.co.za" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors">www.leroysweldingworks.co.za</a>
       </div>
       <div className="flex items-center gap-6">
         <span className="text-[10px] text-zinc-400 uppercase font-black tracking-widest hidden sm:inline italic">Precision in every weld</span>
